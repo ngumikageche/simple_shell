@@ -5,10 +5,14 @@ void help_alias(void);
 void help_cd(void);
 void help_exit(void);
 void help_help(void);
-
+void help_env(void);
+void help_setenv(void);
+void help_history(void);
+void help_unsetenv(void);
 /**
- * help_all - Displays all possible builtin shellby commands.
- */
+* help_all - Displays all possible builtin shellby commands.
+*/
+
 void help_all(void)
 {
 	char *msg = "Shellby\nThese shell commands are defined internally.\n";
@@ -101,10 +105,6 @@ void help_help(void)
 }
 
 
-void help_env(void);
-void help_setenv(void);
-void help_unsetenv(void);
-void help_history(void);
 
 /**
  * help_env - Displays information on the shellby builtin command 'env'.
