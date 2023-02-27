@@ -1,6 +1,5 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
-
 #include <fcntl.h>
 #include <signal.h>
 #include <sys/types.h>
@@ -17,9 +16,9 @@
 /* Global environemnt */
 extern char **environ;
 /* Global program name */
-char *name;
+extern char *name;
 /* Global history counter */
-int hist;
+extern int hist;
 
 /**
  * struct list_s - A new struct type defining a linked list.
@@ -57,7 +56,7 @@ typedef struct alias_s
 } alias_t;
 
 /* Global aliases linked list */
-alias_t *aliases;
+extern alias_t *aliases;
 
 /* Main Helpers */
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
